@@ -38,3 +38,8 @@ rather than the original images — swap in real screenshots at
 A ready-made Pages deploy workflow is included at
 `.github/workflows/pages.yml` — enabling "GitHub Actions" as the Pages
 source will deploy automatically on every push to `main`.
+
+## Hosting on Vercel
+
+Import this repo at [vercel.com/new](https://vercel.com/new) with the
+framework preset set to "Other" and no build command — it deploys as-is.
