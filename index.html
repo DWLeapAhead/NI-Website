@@ -12,7 +12,20 @@
 
 <header class="site-header" id="top">
   <div class="header-inner">
-    <a class="logo" href="#top"><span class="logo-heavy">NETWORK</span><span class="logo-light">INTELLIGENCE</span></a>
+    <a class="logo" href="#top">
+      <svg class="logo-mark" width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 18C5 18 5 6 9 6C13 6 13 18 17 18C21 18 21 6 25 6C27 6 28 7 28 7" stroke="url(#logoGrad)" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <circle cx="28" cy="6" r="2" fill="#FCE205"/>
+        <defs>
+          <linearGradient id="logoGrad" x1="2" y1="12" x2="28" y2="12" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#582A90"/>
+            <stop offset="0.5" stop-color="#911961"/>
+            <stop offset="1" stop-color="#B61A3F"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <span class="logo-word">Network Intelligence</span>
+    </a>
     <nav class="main-nav">
       <a href="#missions">What we do</a>
       <a href="#range">Products</a>
@@ -23,40 +36,63 @@
       <a href="#identity">Identity</a>
       <a href="#group">Group</a>
     </nav>
-    <a class="btn btn-primary nav-cta" href="#contact">Talk to us</a>
+    <a class="btn btn-primary nav-cta" href="#contact">Talk to us <span class="arrow">↘</span></a>
   </div>
 </header>
 
 <main>
 
   <section class="hero">
-    <div class="dot-grid"></div>
+    <div class="hero-bg" aria-hidden="true">
+      <svg viewBox="0 0 1600 900" preserveAspectRatio="xMaxYMax slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#3a3a3a"/>
+            <stop offset="1" stop-color="#1a1a1a"/>
+          </linearGradient>
+          <linearGradient id="fadeLeft" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#000000" stop-opacity="1"/>
+            <stop offset="0.55" stop-color="#000000" stop-opacity="0.55"/>
+            <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <rect width="1600" height="900" fill="url(#skyGrad)"/>
+        <polygon points="650,900 980,180 1180,520 1320,340 1600,900" fill="#4a4a4a"/>
+        <polygon points="980,180 1060,340 900,340" fill="#6b6b6b"/>
+        <polygon points="880,900 1180,520 1320,340 1600,620 1600,900" fill="#353535"/>
+        <polygon points="200,900 500,420 700,620 900,900" fill="#2a2a2a"/>
+        <rect width="1600" height="900" fill="url(#fadeLeft)"/>
+      </svg>
+    </div>
     <div class="hero-inner">
-      <p class="eyebrow">The full security ascent</p>
+      <p class="eyebrow">✴ The full security ascent</p>
       <h1>Secure with AI.<br><span class="gradient-text">Secure the AI.</span></h1>
-      <p class="hero-sub">Practitioner-built products and expert teams for the new terrain — discover, test, govern, defend and remediate.</p>
+      <p class="hero-sub">Practitioner-built products and expert teams for the new terrain, discover, test, govern, defend and remediate.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#missions">Explore the ascent</a>
-        <a class="btn btn-ghost" href="#contact">Talk to an expert</a>
+        <a class="btn btn-primary" href="#missions">Explore the ascent <span class="arrow">↗</span></a>
+        <a class="btn btn-text" href="#contact">Talk to an expert <span class="arrow">↗</span></a>
       </div>
+      <p class="hero-footnote-top"><a href="https://www.ilantus.com/" target="_blank" rel="noopener">✦ Identity is the belay line →</a></p>
       <ol class="ascent-steps">
-        <li><span class="step-num">01</span><span class="step-label">Discover</span><span class="step-product">Denali</span></li>
-        <li><span class="step-num">02</span><span class="step-label">Test</span><span class="step-product">Kamet</span></li>
-        <li><span class="step-num">03</span><span class="step-label">Govern</span><span class="step-product">Shasta</span></li>
-        <li><span class="step-num">04</span><span class="step-label">Defend</span><span class="step-product">Rainier</span></li>
-        <li><span class="step-num">05</span><span class="step-label">Remediate</span><span class="step-product">El Capitan</span></li>
+        <li><span class="step-dot"></span><span class="step-num">01</span></li>
+        <li><span class="step-dot"></span><span class="step-num">02</span></li>
+        <li><span class="step-dot active"></span><span class="step-num">03</span></li>
+        <li><span class="step-dot"></span><span class="step-num">04</span></li>
+        <li><span class="step-dot"></span><span class="step-num">05</span></li>
       </ol>
-      <p class="hero-footnote"><a href="https://www.ilantus.com/" target="_blank" rel="noopener">Identity is the belay line →</a></p>
     </div>
   </section>
 
-  <section class="section" id="missions">
+  <section class="section section-light" id="missions">
     <p class="section-kicker">01 / THE DUAL MANDATE</p>
-    <h2>Two sides of the <span class="gradient-text">same mountain.</span></h2>
-    <p class="section-lede">AI changes how security work gets done. It also creates an entirely new environment to secure.</p>
+    <div class="mandate-head">
+      <h2>Two sides of the same mountain.</h2>
+      <p class="section-lede">AI changes how security work gets done. It also creates an entirely new environment to secure.</p>
+    </div>
     <div class="mandate-grid">
-      <article class="mandate-card">
-        <p class="mandate-tag">01 &middot; AI FOR SECURITY</p>
+      <article class="mandate-card mandate-dark">
+        <span class="mandate-icon">01</span>
+        <p class="mandate-tag">AI FOR SECURITY</p>
         <h3>Make the team more capable.</h3>
         <p>Autonomous testing. Agentic operations. Continuous governance. Evidence-led remediation.</p>
         <ul class="pill-list">
@@ -67,7 +103,8 @@
         </ul>
       </article>
       <article class="mandate-card">
-        <p class="mandate-tag">02 &middot; SECURITY OF AI</p>
+        <span class="mandate-icon">02</span>
+        <p class="mandate-tag">SECURITY OF AI</p>
         <h3>Make the system accountable.</h3>
         <p>Discover the agents, models, tools, identities and data. Trace how they connect. See the evidence behind the risk.</p>
         <ul class="pill-list">
@@ -79,22 +116,62 @@
     </div>
   </section>
 
-  <section class="section" id="range">
-    <p class="section-kicker">02 / THE RANGE</p>
-    <h2>Five products. <span class="gradient-text">One ascent.</span></h2>
-    <p class="section-lede">Each product owns a distinct stage and creates value on its own. Together, they define a route from first evidence to verified action.</p>
-    <p class="section-sub">Products by <strong>Transilience</strong> — the product &amp; platform umbrella</p>
+  <section class="section section-light range-section" id="range">
+    <div class="range-head">
+      <p class="section-kicker">02 / THE RANGE</p>
+      <h2>Five products. One ascent.</h2>
+      <p class="section-lede">Each product owns a distinct stage and creates value on its own. Together, they define a route from first evidence to verified action.</p>
+    </div>
+    <div class="range-bar">
+      <span>Products by <strong>Transilience</strong></span>
+      <span class="range-bar-sub">the product &amp; platform umbrella</span>
+    </div>
 
-    <div class="range-grid">
-      <a class="range-card" href="#denali"><span class="range-step">01 Discover</span><h3>Denali</h3><p>Evidence-backed inventory, posture, attack paths and runtime context for AI systems.</p><span class="range-badge">Security of AI</span></a>
-      <a class="range-card" href="#kamet"><span class="range-step">02 Test</span><h3>Kamet</h3><p>Autonomous, AI-powered penetration testing and red teaming on real offensive tooling.</p><span class="range-badge">AI for Security</span></a>
-      <a class="range-card" href="#shasta"><span class="range-step">03 Govern</span><h3>Shasta</h3><p>Continuous cloud, compliance and AI-governance evidence in one operating view.</p><span class="range-badge">AI for Security</span></a>
-      <a class="range-card" href="#rainier"><span class="range-step">04 Defend</span><h3>Rainier</h3><p>Agentic detection and response layered onto the SIEM, XDR and workflows you already run.</p><span class="range-badge">AI for Security</span></a>
-      <a class="range-card" href="#el-capitan"><span class="range-step">05 Remediate</span><h3>El Capitan</h3><p>Evidence-bound prioritization and human-governed remediation from finding to verified fix.</p><span class="range-badge">AI for Security</span></a>
+    <div class="range-list">
+      <a class="range-row" href="#denali">
+        <span class="range-row-num">01</span>
+        <span class="range-row-tag">Discover</span>
+        <h3>Denali</h3>
+        <p>Evidence-backed inventory, posture, attack paths and runtime context for AI systems.</p>
+        <span class="range-row-badge">Security of AI</span>
+        <span class="range-row-arrow">↘</span>
+      </a>
+      <a class="range-row range-row-dark" href="#kamet">
+        <span class="range-row-num">02</span>
+        <span class="range-row-tag">Test</span>
+        <h3>Kamet</h3>
+        <p>Autonomous, AI-powered penetration testing and red teaming on real offensive tooling.</p>
+        <span class="range-row-badge">AI for Security</span>
+        <span class="range-row-arrow range-row-arrow-fill">↘</span>
+      </a>
+      <a class="range-row" href="#shasta">
+        <span class="range-row-num">03</span>
+        <span class="range-row-tag">Govern</span>
+        <h3>Shasta</h3>
+        <p>Continuous cloud, compliance and AI-governance evidence in one operating view.</p>
+        <span class="range-row-badge">AI for Security</span>
+        <span class="range-row-arrow">↘</span>
+      </a>
+      <a class="range-row range-row-dark" href="#rainier">
+        <span class="range-row-num">04</span>
+        <span class="range-row-tag">Defend</span>
+        <h3>Rainier</h3>
+        <p>Agentic detection and response layered onto the SIEM, XDR and workflows you already run.</p>
+        <span class="range-row-badge">AI for Security</span>
+        <span class="range-row-arrow range-row-arrow-fill">↘</span>
+      </a>
+      <a class="range-row" href="#el-capitan">
+        <span class="range-row-num">05</span>
+        <span class="range-row-tag">Remediate</span>
+        <h3>El Capitan</h3>
+        <p>Evidence-bound prioritization and human-governed remediation from finding to verified fix.</p>
+        <span class="range-row-badge">AI for Security</span>
+        <span class="range-row-arrow">↘</span>
+      </a>
     </div>
 
     <div class="foundation-strip">
-      <p class="foundation-label">SHARED ENTERPRISE FOUNDATION — one platform layer, being standardized across the range.</p>
+      <p class="foundation-label">Shared enterprise foundation — one platform layer, being standardized across the range.</p>
       <ol class="foundation-list">
         <li>01 Architecture</li>
         <li>02 Authentication</li>
@@ -105,10 +182,12 @@
     </div>
   </section>
 
-  <section class="section" id="expertise">
-    <p class="section-kicker">03 / BUILT IN THE FIELD</p>
-    <h2>Products shaped by <span class="gradient-text">production work.</span></h2>
-    <p class="section-lede">Our tools did not begin as abstract platform ideas. They came from practitioners solving recurring problems inside real security programs.</p>
+  <section class="section section-dark" id="expertise">
+    <div class="expertise-head">
+      <p class="section-kicker">03 / BUILT IN THE FIELD</p>
+      <h2>Products shaped by <span class="gradient-text">production</span> work.</h2>
+      <p class="section-lede">Our tools did not begin as abstract platform ideas. They came from practitioners solving recurring problems inside real security programs.</p>
+    </div>
 
     <div class="stat-row">
       <div class="stat"><span class="stat-num">25+</span><span class="stat-label">years in cybersecurity</span></div>
@@ -117,7 +196,10 @@
       <div class="stat"><span class="stat-num">1</span><span class="stat-label">accountable security partner</span></div>
     </div>
 
-    <h3 class="subhead">Technology gives the team leverage. People still own the outcome.</h3>
+    <div class="subhead-row">
+      <span class="subhead-icon">🛡</span>
+      <h3 class="subhead">Technology gives the team leverage. People still own the outcome.</h3>
+    </div>
     <div class="services-grid">
       <article class="service-card"><span class="service-num">01</span><h4>Advisory &amp; assurance</h4><p>Risk, compliance, audit and security programs grounded in evidence and business context.</p></article>
       <article class="service-card"><span class="service-num">02</span><h4>Offensive security</h4><p>Assessment, penetration testing and adversarial validation delivered by teams who build the tooling.</p></article>
@@ -352,7 +434,7 @@
     <p class="resource-footnote">Need help applying these projects to your environment? <a href="mailto:contact@networkintelligence.ai?subject=Network%20Intelligence%20resources">Talk to our security team →</a></p>
   </section>
 
-  <section class="section" id="insights">
+  <section class="section section-light" id="insights">
     <p class="section-kicker">07 / INSIGHTS FROM THE RANGE</p>
     <h2>Ideas tested <span class="gradient-text">in the field.</span></h2>
     <p class="section-lede">Perspectives, technical guides and working methods from the people building and operating modern security programs.</p>
