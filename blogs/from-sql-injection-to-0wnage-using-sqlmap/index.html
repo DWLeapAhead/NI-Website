@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>From SQL Injection to Full Compromise: Why the Basics Still Matter | Network Intelligence</title>
+<meta name="description" content="Why SQL injection remains in the OWASP Top 10 in 2026, why automated exploitation tools raise the stakes, and the architectural fixes that actually close the gap.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <svg class="logo-mark" width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 18C5 18 5 6 9 6C13 6 13 18 17 18C21 18 21 6 25 6C27 6 28 7 28 7" stroke="url(#logoGrad)" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <circle cx="28" cy="6" r="2" fill="#FCE205"/>
+        <defs>
+          <linearGradient id="logoGrad" x1="2" y1="12" x2="28" y2="12" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#582A90"/>
+            <stop offset="0.5" stop-color="#911961"/>
+            <stop offset="1" stop-color="#B61A3F"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <span class="logo-word">Network Intelligence</span>
+    </a>
+    <nav class="main-nav">
+      <a href="../../#missions">What we do</a>
+      <a href="../../#range">Products</a>
+      <a href="../../#in-action">In action</a>
+      <a href="../../#expertise">Expertise</a>
+      <a href="../../#resources">Resources</a>
+      <a href="../../#insights">Insights</a>
+      <a href="../../#identity">Identity</a>
+      <a href="../../#group">Group</a>
+    </nav>
+    <a class="btn btn-primary nav-cta" href="../../#contact">Talk to us <span class="arrow">↘</span></a>
+  </div>
+</header>
+
+<p class="breadcrumb"><a href="../../">Network Intelligence</a> / <a href="../">Blog</a> / From SQL Injection to Full Compromise: Why the Basics Still Matter</p>
+
+<main>
+
+  <section class="content-hero">
+    <p class="section-kicker">Blog &middot; Application Security</p>
+    <h1>From SQL Injection to Full Compromise: Why the Basics Still Matter</h1>
+    <p class="content-sub">SQL injection has been in the OWASP Top 10 for two decades. Here's why automated exploitation tools make the architectural fix non-negotiable.</p>
+    <div class="content-meta">
+      <span>Shrikant Antre</span>
+      <span>&middot;</span>
+      <span>Updated 2026</span>
+    </div>
+  </section>
+
+  <article class="article-body">
+
+    <h2>Why SQL injection still matters</h2>
+    <p>SQL injection has sat in the OWASP Top 10 injection category for over two decades, and it's still one of the most consequential vulnerability classes in production web applications. When an application builds database queries by concatenating untrusted input instead of parameterizing it, an attacker can alter the query's logic &mdash; reading data they shouldn't see, modifying records, or in severe cases reaching the underlying operating system.</p>
+
+    <h2>Why it keeps happening</h2>
+    <ul>
+      <li><strong>Weak input validation:</strong> user input reaches the database layer without being checked or escaped.</li>
+      <li><strong>Over-privileged database accounts:</strong> application accounts with far more access than the app actually needs turn a query flaw into a full data breach.</li>
+      <li><strong>Poor architecture:</strong> queries built through string concatenation instead of parameterized queries or stored procedures.</li>
+      <li><strong>Reused legacy or public code:</strong> older code paths and copied snippets often predate current secure-coding standards.</li>
+      <li><strong>Missing controls:</strong> no web application firewall, no least-privilege database roles, no systematic code review for injection patterns.</li>
+    </ul>
+
+    <h2>Why automated discovery changes the risk calculus</h2>
+    <p>Open-source and commercial tools can detect and demonstrate SQL injection automatically, across most major database engines, using multiple detection techniques &mdash; boolean-based, time-based, error-based, and more. That automation cuts both ways: it's exactly why unpatched injection flaws get found and exploited quickly once an application is exposed to the internet, and why penetration testing teams use the same class of tooling to find and prove out these flaws before attackers do, under authorized, scoped engagements.</p>
+
+    <h2>How to actually close this off</h2>
+    <ul>
+      <li><strong>Parameterized queries and prepared statements</strong> everywhere user input touches a database call &mdash; not just on the obvious forms.</li>
+      <li><strong>Least-privilege database accounts</strong> so a successful injection can't reach beyond what the application genuinely needs.</li>
+      <li><strong>Input validation and output encoding</strong> as defense in depth, not a replacement for parameterization.</li>
+      <li><strong>Regular authorized penetration testing</strong> against both new and legacy code paths, since injection flaws accumulate fastest in code nobody's touched recently.</li>
+      <li><strong>A web application firewall</strong> as a compensating control while fixes roll out, not as the primary defense.</li>
+    </ul>
+
+    <h2>The takeaway</h2>
+    <p>Automated tools make SQL injection trivial to find and exploit once it exists. That's an argument for closing the gap at the architecture level &mdash; parameterized queries and least privilege &mdash; rather than relying on detection or a WAF rule to catch every variant after the fact.</p>
+
+  </article>
+
+  <div class="article-author-box">
+    <div class="author-initial">SA</div>
+    <div>
+      <h4>Shrikant Antre</h4>
+      <p>Network Intelligence</p>
+    </div>
+  </div>
+
+  <section class="faq-section">
+    <h2>Frequently asked</h2>
+    <div class="faq-list">
+      <details class="faq-item"><summary>Is SQL injection still a real risk in 2026?</summary><p>Yes &mdash; it remains in the OWASP Top 10, and automated discovery tools make unpatched instances fast to find once an application is exposed.</p></details>
+      <details class="faq-item"><summary>Does a WAF solve SQL injection?</summary><p>A WAF is a useful compensating control, but it's not a substitute for parameterized queries and least-privilege database accounts at the architecture level.</p></details>
+      <details class="faq-item"><summary>How should we test for injection safely?</summary><p>Through authorized, scoped penetration testing against both production and legacy code paths, never by running exploitation tooling against systems you don't have explicit permission to test.</p></details>
+    </div>
+  </section>
+
+  <section class="product-cta-section">
+    <div class="product-cta-box">
+      <p class="cta-kicker">Plan the next move</p>
+      <h2>Talk through your situation.</h2>
+      <p>Describe your current state and what needs to change, and we'll map a practical starting point.</p>
+      <a class="btn btn-primary" href="mailto:contact@networkintelligence.ai?subject=Talk%20to%20us">Talk to an expert</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <a class="logo" href="../../"><span class="logo-word">Network Intelligence</span></a>
+    <p class="footer-tagline">Cybersecurity for the AI era.</p>
+    <nav class="footer-nav">
+      <a href="../../#missions">What we do</a>
+      <a href="../../#range">Products</a>
+      <a href="../../#resources">Resources</a>
+      <a href="../../#insights">Insights</a>
+      <a href="../../#group">Group</a>
+    </nav>
+    <p class="copyright">© 2026 Network Intelligence. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="../../script.js"></script>
+</body>
+</html>
