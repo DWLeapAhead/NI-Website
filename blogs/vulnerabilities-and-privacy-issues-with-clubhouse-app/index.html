@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vulnerabilities and Privacy Issues with the Clubhouse App | Network Intelligence</title>
+<meta name="description" content="How Clubhouse's rapid growth exposed insecure API design, plaintext data transmission, and excessive contact-data collection &mdash; and what a Secure SDLC would have prevented.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <svg class="logo-mark" width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 18C5 18 5 6 9 6C13 6 13 18 17 18C21 18 21 6 25 6C27 6 28 7 28 7" stroke="url(#logoGrad)" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <circle cx="28" cy="6" r="2" fill="#FCE205"/>
+        <defs>
+          <linearGradient id="logoGrad" x1="2" y1="12" x2="28" y2="12" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#582A90"/>
+            <stop offset="0.5" stop-color="#911961"/>
+            <stop offset="1" stop-color="#B61A3F"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <span class="logo-word">Network Intelligence</span>
+    </a>
+    <nav class="main-nav">
+      <a href="../../#missions">What we do</a>
+      <a href="../../#range">Products</a>
+      <a href="../../#in-action">In action</a>
+      <a href="../../#expertise">Expertise</a>
+      <a href="../../#resources">Resources</a>
+      <a href="../../#insights">Insights</a>
+      <a href="../../#identity">Identity</a>
+      <a href="../../#group">Group</a>
+    </nav>
+    <a class="btn btn-primary nav-cta" href="../../#contact">Talk to us <span class="arrow">↘</span></a>
+  </div>
+</header>
+
+<p class="breadcrumb"><a href="../../">Network Intelligence</a> / <a href="../">Blog</a> / Vulnerabilities and Privacy Issues with the Clubhouse App</p>
+
+<main>
+
+  <section class="content-hero">
+    <p class="section-kicker">Blog &middot; Application Security</p>
+    <h1>Vulnerabilities and Privacy Issues with the Clubhouse App</h1>
+    <p class="content-sub">What Clubhouse's rapid pandemic-era growth exposed about insecure design, weak encryption, and excessive data collection.</p>
+    <div class="content-meta">
+      <span>Lionel Faleiro</span>
+      <span>&middot;</span>
+      <span>Updated 2026</span>
+    </div>
+  </section>
+
+  <article class="article-body">
+
+    <h2>Clubhouse and its growth during COVID-19</h2>
+    <p>Clubhouse, an invite-only iPhone audio-chat app launched in April 2020, grew rapidly through the pandemic &mdash; reaching roughly 10 million weekly active users by February 2021 and a reported valuation near USD 1 billion that January. That speed of growth outran its security hardening.</p>
+
+    <h2>How was Clubhouse attacked?</h2>
+    <p>A developer published open-source code that let people join rooms without invitations and listen to private conversations; others streamed room audio to external websites. Separately, an attacker reverse-engineered the iOS app to expose its APIs, and a bot-based system moved through rooms &mdash; blocking one bot simply brought another in its place. The Stanford Internet Observatory found that user IDs and room IDs were sent to infrastructure provider Agora in plaintext, with some user data routed to servers in China.</p>
+
+    <h2>Other privacy concerns</h2>
+    <p>The app requested access to users' full contacts, collecting data on people who had never agreed to use it &mdash; raising concerns about shadow profiles built from that contact data. Twitter integration requested broad account data without clearly explaining its use, and the contacts prompt offered only "Allow" or "Don't Allow," with a follow-up pop-up insisting access was required. Experts also questioned whether recordings were genuinely encrypted.</p>
+
+    <h2>How impactful could breaches like this be?</h2>
+    <p>Attacks on popular apps can expose data for millions of users almost overnight. The parallel often drawn is Zoom's 2020 problems &mdash; "zoom-bombing" incidents and roughly five million Zoom credentials sold online &mdash; which showed how fast a security gap in a suddenly-popular app becomes a mass-exposure event.</p>
+
+    <h2>How such attacks can be prevented</h2>
+    <p>These vulnerabilities point to weak secure software development practices. Flaws introduced at design time get more severe as usage scales. The fix is a Secure SDLC: security built into coding and testing, verified through source code review, with teams moving from DevOps to DevSecOps so security is a shared responsibility rather than a late-stage gate. Regular security architecture reviews, manual and automated penetration testing, and end-to-end encryption round out the practice.</p>
+
+    <h2>A perennial warning</h2>
+    <p>As demand for data grows, so will attempts to steal it. Security has to be built into source code and design from day one, and treated as a strategic and cultural priority &mdash; not a feature to retrofit once user trust is already on the line.</p>
+
+  </article>
+
+  <div class="article-author-box">
+    <div class="author-initial">LF</div>
+    <div>
+      <h4>Lionel Faleiro</h4>
+      <p>Network Intelligence</p>
+    </div>
+  </div>
+
+  <section class="faq-section">
+    <h2>Frequently asked</h2>
+    <div class="faq-list">
+      <details class="faq-item"><summary>What was the core vulnerability in Clubhouse?</summary><p>Reverse-engineered APIs let unauthorized clients join and stream room audio, while user and room IDs were transmitted to the infrastructure provider in plaintext.</p></details>
+      <details class="faq-item"><summary>What is a Secure SDLC?</summary><p>A software development lifecycle where security requirements, code review, and testing are built into every stage, instead of a review added just before release.</p></details>
+      <details class="faq-item"><summary>What's the difference between DevOps and DevSecOps?</summary><p>DevSecOps makes security a shared responsibility across the development pipeline, rather than a separate gate DevOps hands off to before shipping.</p></details>
+    </div>
+  </section>
+
+  <section class="product-cta-section">
+    <div class="product-cta-box">
+      <p class="cta-kicker">Plan the next move</p>
+      <h2>Talk through your situation.</h2>
+      <p>Describe your current state and what needs to change, and we'll map a practical starting point.</p>
+      <a class="btn btn-primary" href="mailto:contact@networkintelligence.ai?subject=Talk%20to%20us">Talk to an expert</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <a class="logo" href="../../"><span class="logo-word">Network Intelligence</span></a>
+    <p class="footer-tagline">Cybersecurity for the AI era.</p>
+    <nav class="footer-nav">
+      <a href="../../#missions">What we do</a>
+      <a href="../../#range">Products</a>
+      <a href="../../#resources">Resources</a>
+      <a href="../../#insights">Insights</a>
+      <a href="../../#group">Group</a>
+    </nav>
+    <p class="copyright">© 2026 Network Intelligence. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="../../script.js"></script>
+</body>
+</html>
