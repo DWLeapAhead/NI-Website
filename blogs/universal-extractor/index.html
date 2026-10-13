@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Universal Extractor: One Tool for Nearly Any Archive or Executable | Network Intelligence</title>
+<meta name="description" content="Universal Extractor is a free, open-source tool that handles nearly any archive or executable format forensic investigators run into &mdash; built on 7-Zip, UnRAR, PEiD and more.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <svg class="logo-mark" width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 18C5 18 5 6 9 6C13 6 13 18 17 18C21 18 21 6 25 6C27 6 28 7 28 7" stroke="url(#logoGrad)" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <circle cx="28" cy="6" r="2" fill="#FCE205"/>
+        <defs>
+          <linearGradient id="logoGrad" x1="2" y1="12" x2="28" y2="12" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#582A90"/>
+            <stop offset="0.5" stop-color="#911961"/>
+            <stop offset="1" stop-color="#B61A3F"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <span class="logo-word">Network Intelligence</span>
+    </a>
+    <nav class="main-nav">
+      <a href="../../#missions">What we do</a>
+      <a href="../../#range">Products</a>
+      <a href="../../#in-action">In action</a>
+      <a href="../../#expertise">Expertise</a>
+      <a href="../../#resources">Resources</a>
+      <a href="../../#insights">Insights</a>
+      <a href="../../#identity">Identity</a>
+      <a href="../../#group">Group</a>
+    </nav>
+    <a class="btn btn-primary nav-cta" href="../../#contact">Talk to us <span class="arrow">↘</span></a>
+  </div>
+</header>
+
+<p class="breadcrumb"><a href="../../">Network Intelligence</a> / <a href="../">Blog</a> / Universal Extractor: One Tool for Nearly Any Archive or Executable</p>
+
+<main>
+
+  <section class="content-hero">
+    <p class="section-kicker">Blog &middot; Digital Forensics</p>
+    <h1>Universal Extractor: One Tool for Nearly Any Archive or Executable</h1>
+    <p class="content-sub">A free, open-source extractor that saves forensic investigators from juggling a dozen separate archive tools mid-investigation.</p>
+    <div class="content-meta">
+      <span>Nikhil Wagholikar</span>
+      <span>&middot;</span>
+      <span>Updated 2026</span>
+    </div>
+  </section>
+
+  <article class="article-body">
+
+    <h2>Why forensic investigators need it</h2>
+    <p>Forensic investigators and reverse engineers routinely need to open executables and archives &mdash; .exe, .dll, .msi, .rpm, .zip, .rar, .bin/.cue, .uha, and dozens of others &mdash; that a plain text editor can't touch. Purpose-built forensic tools often cover only a narrow set of formats, are hard to interpret, or come at a real licensing cost. Universal Extractor is a free, open-source answer that covers most of what examiners actually run into day to day.</p>
+
+    <h2>What it is</h2>
+    <p>Universal Extractor is written in AutoIt and bundles several other open-source tools &mdash; 7-Zip, UnRAR, UPX, PEiD, Info-ZIP UnZip, and tee among them &mdash; behind one interface. It supports a wide range of archive types: ZIP, RAR, 7-Zip, CAB, ISO, BIN/CUE, and most common installer package formats.</p>
+
+    <h2>How it decides what to do</h2>
+    <p>Non-executable files are extracted directly based on their extension. For executables, PEiD first identifies the file signature and selects the right sub-extractor; if PEiD doesn't recognize the file, 7-Zip and UnZip are tried as fallbacks. Success is judged by whether the output directory actually contains extracted data, and failures are logged for review.</p>
+
+    <h2>Getting it running</h2>
+    <p>Three download options are available: a small installer (~3MB) that adds Windows Explorer context-menu integration, a source code package, and a portable binary archive (~2.78MB) that needs no installation. The installer wizard walks through install folder, language, and debug log location, and offers to enable right-click extraction from Explorer.</p>
+
+    <h2>The takeaway</h2>
+    <p>For examiners who need to open nearly any common archive or executable format without juggling a dozen separate tools, Universal Extractor remains a practical, free, and modifiable option &mdash; one less licensing conversation during an investigation that's already moving fast.</p>
+
+  </article>
+
+  <div class="article-author-box">
+    <div class="author-initial">NW</div>
+    <div>
+      <h4>Nikhil Wagholikar</h4>
+      <p>Network Intelligence</p>
+    </div>
+  </div>
+
+  <section class="faq-section">
+    <h2>Frequently asked</h2>
+    <div class="faq-list">
+      <details class="faq-item"><summary>What file types does Universal Extractor handle?</summary><p>A broad range &mdash; ZIP, RAR, 7-Zip, CAB, ISO, BIN/CUE, most installer packages, and more &mdash; by combining several open-source extraction tools behind one interface.</p></details>
+      <details class="faq-item"><summary>Does it require installation?</summary><p>No &mdash; a portable binary archive is available for use without installing anything, alongside the installer option that adds Explorer context-menu integration.</p></details>
+      <details class="faq-item"><summary>How does it handle unrecognized executables?</summary><p>It falls back to 7-Zip and UnZip if PEiD can't identify the file signature, logging failures so the examiner knows what didn't extract.</p></details>
+    </div>
+  </section>
+
+  <section class="product-cta-section">
+    <div class="product-cta-box">
+      <p class="cta-kicker">Plan the next move</p>
+      <h2>Talk through your situation.</h2>
+      <p>Describe your current state and what needs to change, and we'll map a practical starting point.</p>
+      <a class="btn btn-primary" href="mailto:contact@networkintelligence.ai?subject=Talk%20to%20us">Talk to an expert</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <a class="logo" href="../../"><span class="logo-word">Network Intelligence</span></a>
+    <p class="footer-tagline">Cybersecurity for the AI era.</p>
+    <nav class="footer-nav">
+      <a href="../../#missions">What we do</a>
+      <a href="../../#range">Products</a>
+      <a href="../../#resources">Resources</a>
+      <a href="../../#insights">Insights</a>
+      <a href="../../#group">Group</a>
+    </nav>
+    <p class="copyright">© 2026 Network Intelligence. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="../../script.js"></script>
+</body>
+</html>
