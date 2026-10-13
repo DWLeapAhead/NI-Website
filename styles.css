@@ -515,3 +515,60 @@ a { color: inherit; text-decoration: none; }
   .capabilities-list li { gap: 14px; }
   .product-cta-box { padding: 32px 24px; }
 }
+
+/* ---------- Content pages: blog posts, listings, services, practices, static pages ---------- */
+
+.content-hero { max-width: var(--max-width); margin: 0 auto; padding: 64px 32px 40px; border-bottom: 1px solid var(--border); }
+.content-hero .section-kicker { color: var(--text-faint); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 16px; }
+.content-hero h1 { font-size: clamp(30px, 4.2vw, 50px); line-height: 1.08; margin: 0 0 18px; max-width: 820px; }
+.content-hero .content-sub { font-size: 17px; max-width: 680px; color: var(--text-dim); margin: 0 0 20px; }
+.content-meta { display: flex; gap: 18px; flex-wrap: wrap; font-size: 13px; color: var(--text-faint); margin-top: 6px; }
+.content-meta span { display: inline-flex; align-items: center; gap: 6px; }
+
+/* Article / blog post body */
+.article-body { max-width: 740px; margin: 0 auto; padding: 56px 32px 40px; }
+.article-body h2 { font-size: clamp(22px, 2.6vw, 30px); margin: 48px 0 16px; }
+.article-body h3 { font-size: 19px; margin: 32px 0 12px; }
+.article-body p { font-size: 15.5px; line-height: 1.7; margin: 0 0 18px; }
+.article-body ul, .article-body ol { margin: 0 0 20px; padding-left: 22px; color: var(--text-dim); }
+.article-body li { font-size: 15px; line-height: 1.7; margin-bottom: 8px; }
+.article-body strong { color: var(--text); }
+.article-key-takeaways { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px 30px; margin: 0 0 8px; }
+.article-key-takeaways h2 { margin-top: 0; font-size: 18px; }
+.article-author-box { max-width: 740px; margin: 48px auto 0; padding: 28px 30px; border-top: 1px solid var(--border); display: flex; gap: 16px; align-items: flex-start; }
+.article-author-box .author-initial { width: 44px; height: 44px; border-radius: 50%; background: var(--gradient); flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #fff; font-size: 16px; }
+.article-author-box h4 { font-size: 15px; margin: 0 0 4px; }
+.article-author-box p { font-size: 13.5px; margin: 0; }
+
+/* Listing grids: blog index, category, resources, webinars */
+.listing-section { max-width: var(--max-width); margin: 0 auto; padding: 56px 32px 90px; }
+.listing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.listing-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px; display: block; transition: border-color 0.15s; }
+.listing-card:hover { border-color: var(--crimson); }
+.listing-card .lc-tag { font-size: 11px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.06em; }
+.listing-card h4 { font-size: 17px; margin: 12px 0 10px; line-height: 1.35; font-weight: 600; }
+.listing-card p { font-size: 13.5px; margin: 0; }
+
+/* Service / practice page */
+.service-intro { max-width: var(--max-width); margin: 0 auto; padding: 0 32px 56px; }
+.service-intro p { font-size: 17px; max-width: 760px; }
+.service-pillars { max-width: var(--max-width); margin: 0 auto; padding: 0 32px 90px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.service-pillar { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 30px; }
+.service-pillar span { color: var(--text-faint); font-size: 13px; }
+.service-pillar h4 { font-size: 18px; margin: 14px 0 10px; font-weight: 600; }
+.service-pillar p { font-size: 13.5px; margin: 0; }
+
+/* Simple static page (about, contact, career, partnerships, case-studies index) */
+.static-section { max-width: var(--max-width); margin: 0 auto; padding: 0 32px 90px; }
+.static-section h2 { font-size: clamp(24px, 3vw, 34px); margin: 56px 0 18px; }
+.static-section h2:first-child { margin-top: 0; }
+.static-section p { font-size: 15.5px; max-width: 760px; }
+
+@media (max-width: 900px) {
+  .listing-grid { grid-template-columns: repeat(2, 1fr); }
+  .service-pillars { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .content-hero, .article-body, .listing-section, .service-intro, .service-pillars, .static-section { padding-left: 18px; padding-right: 18px; }
+  .listing-grid, .service-pillars { grid-template-columns: 1fr; }
+}
