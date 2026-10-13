@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuckoo Sandbox 102: State-of-the-art Malware Analysis | Network Intelligence</title>
+<meta name="description" content="A practical look at Cuckoo Sandbox, the free open-source malware analysis sandbox &mdash; what it captures, how to set it up, and how to read its reports.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <svg class="logo-mark" width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 18C5 18 5 6 9 6C13 6 13 18 17 18C21 18 21 6 25 6C27 6 28 7 28 7" stroke="url(#logoGrad)" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <circle cx="28" cy="6" r="2" fill="#FCE205"/>
+        <defs>
+          <linearGradient id="logoGrad" x1="2" y1="12" x2="28" y2="12" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#582A90"/>
+            <stop offset="0.5" stop-color="#911961"/>
+            <stop offset="1" stop-color="#B61A3F"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <span class="logo-word">Network Intelligence</span>
+    </a>
+    <nav class="main-nav">
+      <a href="../../#missions">What we do</a>
+      <a href="../../#range">Products</a>
+      <a href="../../#in-action">In action</a>
+      <a href="../../#expertise">Expertise</a>
+      <a href="../../#resources">Resources</a>
+      <a href="../../#insights">Insights</a>
+      <a href="../../#identity">Identity</a>
+      <a href="../../#group">Group</a>
+    </nav>
+    <a class="btn btn-primary nav-cta" href="../../#contact">Talk to us <span class="arrow">↘</span></a>
+  </div>
+</header>
+
+<p class="breadcrumb"><a href="../../">Network Intelligence</a> / <a href="../">Blog</a> / Cuckoo Sandbox 102: State-of-the-art Malware Analysis</p>
+
+<main>
+
+  <section class="content-hero">
+    <p class="section-kicker">Blog &middot; Digital Forensics</p>
+    <h1>Cuckoo Sandbox 102: State-of-the-art Malware Analysis</h1>
+    <p class="content-sub">A free, open-source automated sandbox for detonating and analyzing suspicious files &mdash; what it captures, how to read the output, and who it's built for.</p>
+    <div class="content-meta">
+      <span>Sumit Shrivastava</span>
+      <span>&middot;</span>
+      <span>Updated 2026</span>
+    </div>
+  </section>
+
+  <article class="article-body">
+
+    <h2>What Cuckoo Sandbox is</h2>
+    <p>Cuckoo Sandbox is a free, open-source automated malware analysis system. Instead of a human analyst manually running a suspicious file and watching what happens, Cuckoo detonates the sample in an isolated virtual environment and records everything it does &mdash; then hands back a structured report. It's one of the most widely used tools in malware analysis labs precisely because it's free, extensible, and scriptable into a larger pipeline.</p>
+
+    <h2>What it actually captures</h2>
+    <ul>
+      <li><strong>API call traces</strong> of all the processes spawned by the malware, down to individual Windows API calls.</li>
+      <li><strong>File operations</strong> &mdash; files created, deleted, downloaded, or modified during execution.</li>
+      <li><strong>Memory dumps</strong> of the malicious processes, useful for extracting unpacked payloads or injected code.</li>
+      <li><strong>Full network traffic</strong> captured as a PCAP, even when the traffic is encrypted via SSL/TLS (Cuckoo can intercept and log it).</li>
+      <li><strong>Screenshots</strong> taken throughout execution, showing what the malware actually displayed to a user.</li>
+    </ul>
+    <p>It also supports analysis of a wide range of file types beyond plain Windows executables &mdash; Office documents, PDFs, URLs, and more &mdash; by routing each to the appropriate handler.</p>
+
+    <h2>Getting started</h2>
+    <p>Cuckoo requires a host machine (typically Linux, running the Cuckoo software itself) and one or more guest virtual machines where the actual malware detonation happens. Setup involves installing the Cuckoo package, configuring a virtualization backend (VirtualBox or KVM are the most common), and snapshotting a clean guest VM that Cuckoo reverts to before every run. Samples are submitted via a command-line utility or the web interface, and results arrive as a structured JSON report plus a human-readable summary.</p>
+
+    <h2>Reading the output</h2>
+    <p>A finished Cuckoo report organizes everything by category: a signature summary flagging known-malicious behavior patterns, the full process tree, every network connection with resolved domains, dropped files with their hashes, and the screenshot timeline. Analysts typically start with the signature summary to get an immediate read on severity, then drill into the API trace and network log for the specifics an incident response writeup needs.</p>
+
+    <h2>Who this is for</h2>
+    <p>Cuckoo rewards teams with some Linux, Python, and virtualization experience &mdash; it isn't a one-click SaaS product, and getting a stable sandbox running (especially one that evades a malware sample's own VM-detection checks) takes real setup work. For a SOC or research team willing to invest that time, it's a strong, cost-free foundation for building an internal malware triage pipeline rather than relying solely on third-party sandboxes.</p>
+
+  </article>
+
+  <div class="article-author-box">
+    <div class="author-initial">SS</div>
+    <div>
+      <h4>Sumit Shrivastava</h4>
+      <p>Network Intelligence</p>
+    </div>
+  </div>
+
+  <section class="faq-section">
+    <h2>Frequently asked</h2>
+    <div class="faq-list">
+      <details class="faq-item"><summary>Is Cuckoo Sandbox free?</summary><p>Yes &mdash; it's free and open-source, though running it well requires your own virtualization infrastructure and some setup effort.</p></details>
+      <details class="faq-item"><summary>Can Cuckoo analyze encrypted network traffic?</summary><p>Yes, it can intercept and log SSL/TLS traffic generated by the malware sample during detonation.</p></details>
+      <details class="faq-item"><summary>What file types can Cuckoo analyze besides executables?</summary><p>Office documents, PDFs, URLs, and several other common delivery formats, each routed to an appropriate analysis module.</p></details>
+    </div>
+  </section>
+
+  <section class="product-cta-section">
+    <div class="product-cta-box">
+      <p class="cta-kicker">Plan the next move</p>
+      <h2>Talk through your situation.</h2>
+      <p>Describe your current state and what needs to change, and we'll map a practical starting point.</p>
+      <a class="btn btn-primary" href="mailto:contact@networkintelligence.ai?subject=Talk%20to%20us">Talk to an expert</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <a class="logo" href="../../"><span class="logo-word">Network Intelligence</span></a>
+    <p class="footer-tagline">Cybersecurity for the AI era.</p>
+    <nav class="footer-nav">
+      <a href="../../#missions">What we do</a>
+      <a href="../../#range">Products</a>
+      <a href="../../#resources">Resources</a>
+      <a href="../../#insights">Insights</a>
+      <a href="../../#group">Group</a>
+    </nav>
+    <p class="copyright">© 2026 Network Intelligence. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="../../script.js"></script>
+</body>
+</html>
